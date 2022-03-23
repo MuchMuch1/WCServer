@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>My Resume</title>
+</head>
+<body>
+<div class="width">
+    <div id="overview">
+        <section>
+            <h1><u>{{ name }}</u></h1>
+            <h3>{{ address1 }}</h3>
+            <h3>{{ address2 }}</h3>
+            <h3>Contact: {{ contact }}</h3>
+            <h3>Email Address: {{ email }}</h3>
+        </section>
+
+        <img src="assets/resumePic.png" alt="Resume Image">
+    </div>
+    <hr />
+
+    <div id="objectives">
+        <h2><u>OBJECTIVES</u></h2>
+        <p>{{ objective }}</p>
+    </div>
+    <hr />
+
+    <div id="profile">
+        <h2><u>PERSONAL DATA</u></h2>
+        <table>
+            <tr>
+                <th>Birthday</th>
+                <th>:</th>
+                <th>{{birthDay}}</th>
+            </tr>
+            <tr>
+                <th>Birthplace</th>
+                <th>:</th>
+                <th>{{birthPlace}}</th>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <th>:</th>
+                <th>{{age}}</th>
+            </tr>
+            <tr>
+                <th>Sex</th>
+                <th>:</th>
+                <th>{{sex}}</th>
+            </tr>
+            <tr>
+                <th>Height</th>
+                <th>:</th>
+                <th>{{height}}</th>
+            </tr>
+            <tr>
+                <th>Reiligion</th>
+                <th>:</th>
+                <th>{{religion}}</th>
+            </tr>
+            <tr>
+                <th>Civil Status</th>
+                <th>:</th>
+                <th>{{civilStatus}}</th>
+            </tr>
+            <tr>
+                <th>Father's Name</th>
+                <th>:</th>
+                <th>{{fatherName}}</th>
+            </tr>
+            <tr>
+                <th>Mother's Name</th>
+                <th>:</th>
+                <th>{{motherName}}</th>
+            </tr>
+            <tr>
+                <th>Languages</th>
+                <th>:</th>
+                <th>{{language}}</th>
+            </tr>
+        </table>
+    </div>
+    <hr />
+
+    <div id="edu">
+        <h2><u>EDUCATIONAL BACKGROUND</u></h2>
+        <table>
+        <!-- Elementary -->
+            <tr> 
+                <th>Elementary</th>
+                <th>:</th>
+                <th>{{elemSchool}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>{{elemAddress}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>{{elemYear}}</th>
+            </tr>
+        <!-- Junior High -->
+            <tr>
+                <th>Junior High School</th>
+                <th>:</th>
+                <th>{{jhsSchool}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>{{jhsAddress}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>{{jhsYear}}</th>
+            </tr>
+        <!-- Senior High -->
+            <tr>
+                <th>Senior High School</th>
+                <th>:</th>
+                <th>{{shsSchool}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>{{shsAddress}}</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th>{{shsYear}}</th>
+            </tr>
+        </table>
+    </div>
+    <hr />
+
+    <div id="skills">
+        <h2><u>SKILLS</u></h2>
+        <ul>
+            <li v-for="skills in skills">{{ skills.text }}</li>
+        </ul>
+    </div>
+    <hr />
+
+    <div id="training">
+        <h2><u>TRAINING AND SEMINARS</u></h2>
+        <div class="training">
+            <h3>{{train1}}</h3>
+            <p>{{organization1}}</p>
+            <p>{{address1}}</p>
+            <p>{{date1}}</p>
+        </div>
+        <div class="training">
+            <h3>{{train2}}</h3>
+            <p>{{organization2}}</p>
+            <p>{{address2}}</p>
+            <p>{{date2}}</p>
+        </div>
+        <div class="training">
+            <h3>{{train3}}</h3>
+            <p>{{organization3}}</p>
+            <p>{{address3}}</p>
+            <p>{{date3}}</p>
+        </div>
+        <div class="training">
+            <h3>{{train4}}</h3>
+            <p>{{organization4}}</p>
+            <p>{{address4}}</p>
+            <p>{{date4}}</p>
+        </div>
+    </div>
+    <hr />
+
+    <div>
+        <h4><b><i>I hereby certify that the above given information is true and correct to the best of my knowledge and belief.</i></b></h4>
+    </div>
+</div>
+
+    <!-- Scripts -->
+    <script src="components/overview.js"></script>
+    <script src="components/objectives.js"></script>
+    <script src="components/profile.js"></script>
+    <script src="components/edu.js"></script>
+    <script src="components/skills.js"></script>
+    <script src="components/training.js"></script>
+    
+</body>
+</html>
